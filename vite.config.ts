@@ -6,13 +6,14 @@ import tsPaths from "vite-tsconfig-paths";
 export default defineConfig({
   server: {
     port: 5173,
+    https: true,
   },
   plugins: [react(), mkcert(), tsPaths()],
   build: {
     rollupOptions: {
       output: {
         manualChunks: {
-          "react-vendor": ["react", "react-dom", "react-router-dom"],
+          "react-vendor": ["react", "react-dom", "react-router"],
         },
       },
     },
