@@ -4,6 +4,7 @@ import mkcert from "vite-plugin-mkcert";
 import tsPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
+  base: "/bcn-layer-vision/",
   server: {
     port: 5173,
     https: true,
